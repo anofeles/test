@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'HerdCMS'),
+    'name' => env('APP_NAME', 'Laravel'),
 
     /*
     |--------------------------------------------------------------------------
@@ -162,6 +162,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+        Dimsav\Translatable\TranslatableServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -169,16 +170,13 @@ return [
         /*
          * Application Service Providers...
          */
-        \HerdCMS\Providers\HerdCMSProvider::class,
-        \HerdCMS\Providers\AuthServiceProvider::class,
-        \HerdCMS\Providers\EventServiceProvider::class,
-        \HerdCMS\Providers\RouteServiceProvider::class,
-//        App\Providers\AppServiceProvider::class,
-//        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-//        App\Providers\EventServiceProvider::class,
-//        App\Providers\RouteServiceProvider::class,
+//        TsuCMS\Providers\AppServiceProvider::class,
+        \TsuCMS\Providers\AuthServiceProvider::class,
+//         TsuCMS\Providers\BroadcastServiceProvider::class,
+        \TsuCMS\Providers\EventServiceProvider::class,
+        \TsuCMS\Providers\RouteServiceProvider::class,
 
+        \TsuCMS\Providers\TsuCMSProvider::class,
 
     ],
 
@@ -197,7 +195,7 @@ return [
 
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
-        'herd' => Illuminate\Support\Facades\Artisan::class,
+        'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,
         'Blade' => Illuminate\Support\Facades\Blade::class,
         'Broadcast' => Illuminate\Support\Facades\Broadcast::class,

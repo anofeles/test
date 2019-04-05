@@ -28,18 +28,17 @@ $app = new Illuminate\Foundation\Application(
 
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
-    HerdCMS\Http\Kernel::class
-
+    TsuCMS\Http\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
-    HerdCMS\Http\Kernel::class
+    TsuCMS\Console\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    HerdCMS\Exceptions\Handler::class
+    TsuCMS\Exceptions\Handler::class
 );
 
 /*

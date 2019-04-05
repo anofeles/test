@@ -68,7 +68,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => \HerdCMS\Models\User::class,
+            'model' => TsuCMS\User::class,
         ],
 
         // 'users' => [
